@@ -87,6 +87,27 @@ public class AppCycles {
         System.out.println();
         System.out.print("\r\n");
 
+        if(7%2==0) System.out.println("чётное");
+
+        // mult table
+        N=10;
+
+
+        System.out.print("\t");
+        for(int i=1; i<=N; i++) System.out.print(i + "\t");
+
+        System.out.println();
+
+        for(int i=1; i<=N; i++)
+        {
+            System.out.print(i + "\t");
+            for( j=1; j<=N; j++)
+            {
+                System.out.print(j*i + "\t");
+            }
+            System.out.println();
+        }
+
 
 
 
