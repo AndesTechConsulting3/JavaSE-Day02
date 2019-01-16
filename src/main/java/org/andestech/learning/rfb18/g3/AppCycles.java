@@ -2,6 +2,39 @@ package org.andestech.learning.rfb18.g3;
 
 public class AppCycles {
 
+    static void mult1(int sw)
+    {
+        int N=10, j=0;
+
+        int start_i=2, start_j=2;
+
+        switch (sw)
+        {
+            case 0: start_i=2; start_j=2; break;
+            case 1: start_i=1; start_j=1; break;
+            case 2: start_i=1; start_j=2; break;
+        }
+
+
+        System.out.print("\t");
+        for(j=start_j; j<=N; j=j+2) System.out.print(j + "\t");
+
+        System.out.println();
+
+        for(int i=start_i; i<=N; i=i+2)
+        {
+            System.out.print(i + "\t");
+            for( j=start_j; j<=N; j=j+2)
+            {
+                System.out.print(j*i + "\t");
+            }
+            System.out.println();
+        }
+
+
+
+    }
+
     static void echo(){
         echo("-",72);
     }
@@ -198,6 +231,8 @@ N=15;
 //        {
 //            System.out.println(i+"^2=" + i*i);
 //        }
+
+        for(int i=0; i<3; i++) {echo(); mult1(i);}
 
         }
 
