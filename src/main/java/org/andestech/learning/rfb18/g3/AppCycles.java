@@ -70,6 +70,25 @@ public class AppCycles {
             k++;
         }
 
+        //-------------------
+        System.out.println("------------------------");
+        int n=1;
+        do{
+            System.out.println("n=" + n);
+            n++;
+        }
+        while (n<6);
+
+//1
+        System.out.print("task1,\t");
+        System.out.print("task2,\t");
+        System.out.print("task3");
+//2
+        System.out.println();
+        System.out.print("\r\n");
+
+
+
 
 //        for(int i = 0; i<N; i++)
 //        {
