@@ -2,6 +2,21 @@ package org.andestech.learning.rfb18.g3;
 
 public class AppCycles {
 
+    static void echo(){
+        echo("-",72);
+    }
+
+    static void echo(String s1, int NN)
+    {
+        String s2="";
+
+        for (int i1=0; i1<NN; i1++)  s2 += s1; //s2 = s2 + s1;
+        System.out.println(s2);
+
+    }
+
+
+
     public static void main(String[] args)
     {
 
@@ -45,6 +60,7 @@ public class AppCycles {
 //            }
 //        }
 
+        echo();
 
         for(int i = 0 ; i<N || k<N+1; i++, k++)
         {
@@ -61,6 +77,7 @@ public class AppCycles {
             }
         }
 
+        echo();
         k=2;
         for (;;) {
             if(k>=N) break;
@@ -78,6 +95,7 @@ public class AppCycles {
             n++;
         }
         while (n<6);
+        echo();
 
 //1
         System.out.print("task1,\t");
@@ -89,6 +107,7 @@ public class AppCycles {
 
         if(7%2==0) System.out.println("чётное");
 
+        echo("+", 72);
         // mult table
         N=10;
 
@@ -108,14 +127,78 @@ public class AppCycles {
             System.out.println();
         }
 
+// odd even
+        echo("#", 72);
+
+        N=10;
+
+        int start_i=2, start_j=2;
+        int sw = 2;
+        // sw=1, sw =2
+
+        switch (sw)
+        {
+            case 0: start_i=2; start_j=2; break;
+            case 1: start_i=1; start_j=1; break;
+            case 2: start_i=1; start_j=2; break;
+        }
 
 
+        System.out.print("\t");
+        for(j=start_j; j<=N; j=j+2) System.out.print(j + "\t");
 
+        System.out.println();
+
+        for(int i=start_i; i<=N; i=i+2)
+        {
+            System.out.print(i + "\t");
+            for( j=start_j; j<=N; j=j+2)
+            {
+                System.out.print(j*i + "\t");
+            }
+            System.out.println();
+        }
+
+
+//-------------------------------------
+N=15;
+        for(int i = 0 ; i<=N; i++)
+        {
+            if( i%3 != 0) continue;
+            System.out.println(i+"^2=" + i*i);
+            //..
+            //..
+        }
+
+
+//----------------------------------
+
+       ext: for(int i1 = 0; i1<12; i1++)
+        {
+            for(int i2 = 0; i2<12; i2++)
+            {
+                if(i1*i2 == 80)
+                {
+                    System.out.println("i1=" + i1 + ", i2=" + i2);
+                    System.out.println("found!");
+                    break ext;
+                }
+            }
+
+        }
+
+        {
+            int NN = 75;
+            String s2 = "", s1 = "*";
+
+            for (int i1 = 0; i1 < NN; i1++) s2 += s1; //s2 = s2 + s1;
+            System.out.println(s2);
+        }
 //        for(int i = 0; i<N; i++)
 //        {
 //            System.out.println(i+"^2=" + i*i);
 //        }
 
-    }
+        }
 
-}
+        }
